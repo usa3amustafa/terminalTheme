@@ -26,7 +26,10 @@ const header = document.querySelector('#header')
 const headerClass = document.querySelector('.header')
 const about = document.querySelector('.about')
 
-const sectionOneOptions = {}
+const sectionOneOptions = {
+  rootMargin: '30px',
+  threshold: 0.8,
+}
 
 const sectionOneObserver = new IntersectionObserver(function (
   enteries,

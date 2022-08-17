@@ -544,8 +544,7 @@ footer {
     margin-bottom: 1rem;
   }
   .nav-link {
-    display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   .partners-info {
     flex-direction: column;

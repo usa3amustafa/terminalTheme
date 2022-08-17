@@ -18,3 +18,34 @@ videos.forEach(vid => {
     vid.pause()
   })
 })
+
+// navbar
+
+const logo = document.querySelector('.logo')
+const header = document.querySelector('#header')
+const headerClass = document.querySelector('.header')
+const about = document.querySelector('.about')
+
+const sectionOneOptions = {}
+
+const sectionOneObserver = new IntersectionObserver(function (
+  enteries,
+  sectionOneObserver
+) {
+  enteries.forEach(entry => {
+    console.log(entry)
+
+    if (!entry.isIntersecting) {
+      header.classList.add('sticky')
+      headerClass.classList.add('sticky-header')
+      logo.classList.add('hidden')
+    } else {
+      header.classList.remove('sticky')
+      headerClass.classList.remove('sticky-header')
+      logo.classList.remove('hidden')
+    }
+  })
+},
+sectionOneOptions)
+
+sectionOneObserver.observe(about)

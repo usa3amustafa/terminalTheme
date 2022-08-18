@@ -28,7 +28,7 @@ const about = document.querySelector('.about')
 
 const sectionOneOptions = {
   rootMargin: '30px',
-  threshold: 0.5,
+  threshold: 0,
 }
 
 const sectionOneObserver = new IntersectionObserver(function (

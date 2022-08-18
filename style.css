@@ -82,7 +82,7 @@ body {
   width: 88.5%;
   max-width: 1536px;
   margin: 0 auto;
-  padding: 4rem 0;
+  padding: 5rem 0;
   height: 100vh;
   overflow-y: scroll;
   font-family: 'VT323';
@@ -181,12 +181,16 @@ hr::before {
 
 /* header */
 
+.logo-img {
+  display: none;
+}
+
 .sticky {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 3rem 0 1rem 0;
+  padding: 8rem 0 3rem 0;
   background-color: rgb(0, 44, 0);
   display: inline-block;
   z-index: 1;
@@ -202,7 +206,7 @@ hr::before {
 /* logo */
 
 .logo {
-  font-size: 5rem;
+  font-size: 4rem;
   text-decoration: underline;
 }
 
@@ -255,9 +259,14 @@ hr::before {
   background-color: orange;
   display: inline-block;
   text-decoration: none;
+  text-transform: capitalize;
   color: rgb(0, 44, 0);
   font-size: 1.5rem;
   font-weight: 600;
+}
+
+.cta:hover {
+  background-color: rgb(255, 165, 0, 0.5);
 }
 
 /* projects */
@@ -433,15 +442,8 @@ textarea:focus-visible {
   font-size: 1.25rem;
 }
 
-.patreon-btn {
-  padding: 1rem 2rem;
-  background-color: orange;
-  display: inline-block;
+.patreon-cta {
   margin-top: 2rem;
-  text-decoration: none;
-  color: rgb(0, 44, 0);
-  font-size: 1.5rem;
-  font-weight: 600;
 }
 
 /* footer */
@@ -478,15 +480,87 @@ footer {
   background-color: rgb(0, 44, 0);
 }
 
+@media (max-width: 1440px) {
+  .sticky {
+    padding: 5rem 0 2rem 0;
+  }
+}
+
 @media (max-width: 1366px) {
   .logo {
     font-size: 4rem;
   }
+  .sticky {
+    padding: 4rem 0 2rem 0;
+  }
 }
 
-@media (max-width: 840px) {
+@media (max-width: 860px) {
+  #content {
+    padding-top: 5rem;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* position: relative; */
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .logo-img {
+    display: inline-block;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 6rem;
+    background: rgb(0, 44, 0);
+    z-index: 4;
+    box-shadow: 0px 5px 5px rgb(159 248 25 / 25%);
+
+    transform: translateX(10000px);
+
+    transition: transform 0.3s ease-in;
+  }
+
+  .show-nav {
+    transform: translateX(0);
+  }
+
+  .nav-link {
+    display: block;
+    padding: 1rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 2rem;
+  }
+
+  .close {
+    display: block;
+    font-size: 2rem;
+    position: fixed;
+    top: 10%;
+    right: 15%;
+  }
+
   .logo {
     font-size: 3.5rem;
+  }
+
+  .sticky {
+    padding: 3.5rem 0 1rem 0;
   }
 
   .nav-link {
@@ -535,6 +609,12 @@ footer {
 
   .cta-container {
     justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .sticky {
+    padding: 5rem 0 2rem 0;
   }
 }
 

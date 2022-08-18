@@ -545,6 +545,7 @@ footer {
   .hamburger {
     display: block;
     font-size: 2rem;
+    cursor: pointer;
   }
 
   .close {
@@ -553,6 +554,7 @@ footer {
     position: fixed;
     top: 10%;
     right: 15%;
+    cursor: pointer;
   }
 
   .logo {
